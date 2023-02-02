@@ -1,16 +1,13 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React from "react";
 
-class App extends Component {
-    render() {
-
-        return(
-            <div id="main">
-               {/* Do not remove the main div */}
-            </div>
-        )
-    }
+export default function Town(props) {
+  return (
+    <>
+      {props.town.towns.map((item, index) => (
+        <div id={`town${index + 1}`} key={index}>
+          {item.name}
+        </div>
+      ))}
+    </>
+  );
 }
-
-
-export default App;
